@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wozaixuexi.github.io</id>
     <title>wozaixuexi</title>
-    <updated>2020-05-26T05:46:32.054Z</updated>
+    <updated>2020-05-26T05:51:53.695Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wozaixuexi.github.io"/>
     <link rel="self" href="https://wozaixuexi.github.io/atom.xml"/>
@@ -152,7 +152,7 @@ double CalcXL(int k1,int k2)
 	if(X(k2)==X(k1)) return 9e18; 
 	return (Y(k2)-Y(k1))/(X(k2)-X(k1));
 }
-void PaiXv(int l,int mid,int r)
+void PaiXv(int l,int mid,int r)//归并排序
 {
 	int p1=l,p2=mid+1,cnt=0;
 	while(p1&lt;=mid||p2&lt;=r)
@@ -163,7 +163,7 @@ void PaiXv(int l,int mid,int r)
 	}
 	for(int i=l;i&lt;=r;i++) p[i]=t[i-l+1];
 }
-void Sol(int l,int r,int fl,int fr)
+void Sol(int l,int r,int fl,int fr)//分治
 {
 	if(l==r) 
 		{f[l]=max(f[l],f[l-1]);return;}
