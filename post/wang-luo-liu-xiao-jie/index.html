@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>LuoguP3936 Coloring | 模拟退火 | wozaixuexi</title>	
+<title>网络流小结 | wozaixuexi</title>	
 
 <link rel="stylesheet" href="https://wozaixuexi.github.io/styles/main.css">
 <script type="text/javascript">
@@ -150,10 +150,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">LuoguP3936 Coloring | 模拟退火</h1>
+			<h1 class="wow swing entry-title">网络流小结</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-05-20 20:43:45" itemprop="datePublished" pubdate="">2020-05-20</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-05-22 10:29:21" itemprop="datePublished" pubdate="">2020-05-22</time></i>
 	          </div>
 			
 </span>
@@ -161,89 +161,89 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<h4 id="题目链接"><a href="https://www.luogu.com.cn/problem/P3936">题目链接</a></h4>
-<p>交换格子的颜色构造新方案，无脑退火。</p>
+				<p>占坑待填</p>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;cstdio&gt;
-#include&lt;cstdlib&gt;
-#include&lt;cmath&gt;
+#include&lt;cstring&gt;
 	using namespace std;
-	const double DeltaT=0.999997;
-	const double MnT=1e-16;
-	int n=0,m=0,c=0,Ans=0,p[55];
-	int d[55],Col[25][25],s[55][25][2];
-	int dx[4]={0,0,1,-1};
-	int dy[4]={1,-1,0,0};
-int Calc(int x,int y)
+	const int INF=2e9;
+struct edge
 {
-	int Res=0;
-	for(int i=0;i&lt;4;i++)
-	{
-		int nx=x+dx[i],ny=y+dy[i];
-		if(1&lt;=nx&amp;&amp;nx&lt;=n&amp;&amp;1&lt;=ny&amp;&amp;ny&lt;=m&amp;&amp;Col[x][y]!=Col[nx][ny]) Res++;
-	}
-	return Res;
+	int last;
+	int end;
+	int weight;
+}e[200005];
+	int n=0,m=0,s=0,t=0;
+	int ne=1,note[10005];
+	int q[10005],d[10005];
+int read()
+{
+	int x=0;
+	char ch=getchar();
+	while(ch&lt;'0'||ch&gt;'9') ch=getchar();
+	while(ch&gt;='0'&amp;&amp;ch&lt;='9')
+		x=x*10+ch-48,ch=getchar();
+	return x;
 }
-void SA()
+void NewEdge(int u,int v,int w)
 {
-	double T=5;
-	while(T&gt;MnT)
+	ne++;
+	e[ne].last=note[u];
+	e[ne].end=v;
+	e[ne].weight=w;
+	note[u]=ne;
+}
+bool bfs()
+{
+	for(int i=1;i&lt;=n;i++) d[i]=0;
+	int head=1,tail=0;
+	q[++tail]=s,d[s]=1;
+	while(head&lt;=tail)
 	{
-		int x0=rand()%(c-1)+1,y0=rand()%d[x0]+1;
-		int x1=rand()%(c-x0)+x0+1,y1=rand()%d[x1]+1;
-		
-		int Ans0=Ans;
-		Ans0-=Calc(s[x0][y0][0],s[x0][y0][1]);
-		Ans0-=Calc(s[x1][y1][0],s[x1][y1][1]);
-		
-		swap(Col[s[x0][y0][0]][s[x0][y0][1]],Col[s[x1][y1][0]][s[x1][y1][1]]);
-		Ans0+=Calc(s[x0][y0][0],s[x0][y0][1]);
-		Ans0+=Calc(s[x1][y1][0],s[x1][y1][1]);
-		
-		swap(s[x0][y0][0],s[x1][y1][0]);
-		swap(s[x0][y0][1],s[x1][y1][1]);
-		
-		int Delta=Ans-Ans0;
-		if(Delta&gt;0) Ans=Ans0;
-		else if(rand()&lt;exp(Delta/T)*RAND_MAX) Ans=Ans0;
-		else
-		{
-			swap(s[x0][y0][0],s[x1][y1][0]);
-			swap(s[x0][y0][1],s[x1][y1][1]);
-			swap(Col[s[x0][y0][0]][s[x0][y0][1]],Col[s[x1][y1][0]][s[x1][y1][1]]);
-		}
-		T*=DeltaT;
+		int u=q[head++];
+		for(int i=note[u];i;i=e[i].last)
+			if(e[i].weight&amp;&amp;!d[e[i].end])
+			{
+				d[e[i].end]=d[u]+1;
+				if(e[i].end==t) return true;
+				q[++tail]=e[i].end;
+			}
 	}
+	return false;
+}
+int dfs(int x,int flo)
+{
+	if(x==t) return flo;
+	int res=flo;
+	for(int i=note[x];i;i=e[i].last)
+		if(e[i].weight&amp;&amp;d[e[i].end]==d[x]+1)
+		{
+			int flow=dfs(e[i].end,min(e[i].weight,res));
+			if(!flow) {d[e[i].end]=0;continue;}
+			e[i].weight-=flow;
+			e[i^1].weight+=flow;
+			res-=flow;
+			if(!res) break;
+		}
+	return flo-res;
 }
 int main()
 {
-	srand(2333);
-	scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;c);
-	for(int i=1;i&lt;=c;i++) scanf(&quot;%d&quot;,&amp;p[i]);
-	for(int i=1;i&lt;=n;i++)
-		for(int j=1;j&lt;=m;j++)
-		{
-			Col[i][j]=0;
-			for(int k=1;k&lt;=c;k++)
-			{
-				if(d[k]&lt;p[k]) Col[i][j]=k;
-				if(Col[i][j]&amp;&amp;rand()%2) break;
-			}
-			d[Col[i][j]]++;
-			s[Col[i][j]][d[Col[i][j]]][0]=i;
-			s[Col[i][j]][d[Col[i][j]]][1]=j;
-		}
-	for(int i=1;i&lt;=n;i++)
-		for(int j=1;j&lt;=m;j++)
-			Ans+=Calc(i,j);
-	Ans&gt;&gt;=1;
-	if(c&gt;1)	SA();
-	for(int i=1;i&lt;=n;i++)
+	n=read(),m=read(),s=read(),t=read();
+	for(int i=1;i&lt;=m;i++)
 	{
-		for(int j=1;j&lt;=m;j++)
-			printf(&quot;%d &quot;,Col[i][j]);
-		printf(&quot;\n&quot;);
+		int u=read(),v=read(),w=read();
+		NewEdge(u,v,w);
+		NewEdge(v,u,0);
 	}
+	int ans=0;
+	while(bfs())
+		for(;;)
+		{
+			int t=dfs(s,INF);
+			if(!t) break; ans+=t;
+		}
+	printf(&quot;%d&quot;,ans);
 	return 0;
 }
 </code></pre>
@@ -251,19 +251,15 @@ int main()
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
  
-				<a href="https://wozaixuexi.github.io/tag/PeTsm4N39/" rel="tag">模拟退火</a>	
-				 
-				<a href="https://wozaixuexi.github.io/tag/M3e6IKc-Z/" rel="tag">题</a>	
-				 
 					</div>						
 <nav class="navigation3 post-navigation3" role="navigation">
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://wozaixuexi.github.io/post/wang-luo-liu-xiao-jie/" rel="prev"> 网络流小结</a></div>
+		<div class="wow bounceInLeft nav-previous3"><a href="https://wozaixuexi.github.io/post/dp-de-you-hua/" rel="prev"> 对于1D/1D的动态规划的优化</a></div>
 		 
 		 
-		<div class="wow bounceInRight nav-next3"><a href="https://wozaixuexi.github.io/post/luogup2538-scoi2008cheng-bao-or-mo-ni-tui-huo/" rel="next"> LuoguP2538 [SCOI2008]城堡 | 模拟退火</a></div>
+		<div class="wow bounceInRight nav-next3"><a href="https://wozaixuexi.github.io/post/luogup3936-coloring-or-mo-ni-tui-huo/" rel="next"> LuoguP3936 Coloring | 模拟退火</a></div>
 		
 		</div>
 	</nav>
