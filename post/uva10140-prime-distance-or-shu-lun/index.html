@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>NC51043 阶乘分解 | wozaixuexi</title>	
+<title>UVA10140 Prime Distance | 数论 | wozaixuexi</title>	
 
 <link rel="stylesheet" href="https://wozaixuexi.github.io/styles/main.css">
 <script type="text/javascript">
@@ -150,10 +150,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">NC51043 阶乘分解</h1>
+			<h1 class="wow swing entry-title">UVA10140 Prime Distance | 数论</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-05-26 19:07:48" itemprop="datePublished" pubdate="">2020-05-26</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-06-01 09:25:51" itemprop="datePublished" pubdate="">2020-06-01</time></i>
 	          </div>
 			
 </span>
@@ -161,34 +161,56 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<pre><code class="language-cpp">#include&lt;iostream&gt;
+				<p><a href="https://www.luogu.com.cn/problem/UVA10140">题目链接</a></p>
+<p>观察到，虽然<code>L</code>和<code>R</code>很大，但是<code>R-L</code>不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span>，考虑用筛法筛去<code>[L,R]</code>中的合数，留下质数，然后枚举相邻的两个质数求答案即可。</p>
+<p>一个合数<code>x</code>，至少有一个质因数不超过<code>sqrt(x)</code>。</p>
+<p>所以我们只需要预处理出<code>[1,sqrt(R)]</code>中的所有质数，再拿这些质数筛去<code>[L,R]</code>中的合数，即可得出<code>[L,R]</code>中的质数。</p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;cstdio&gt;
+#include&lt;cmath&gt;
 	using namespace std;
-	int n=0,cnt=0,pri[1000005],Mn[1000005],s[1000005];
-void GetPri()
+	const int N=sqrt((long long)1&lt;&lt;31);
+	int cnt=0,pri[50005],Mn[50005];
+	bool s[1000005];
+int main()
 {
-	for(int i=2;i&lt;=n;i++)
+	for(int i=2;i&lt;=N;i++)//线性筛
 	{
 		if(!Mn[i]) Mn[i]=i,pri[++cnt]=i;
 		for(int j=1;j&lt;=cnt;j++)
 		{
-			if(pri[j]&gt;Mn[i]||pri[j]&gt;n/i) break;
+			if(pri[j]&gt;Mn[i]||pri[j]&gt;N/i) break;
 			Mn[pri[j]*i]=pri[j];
 		}
 	}
-}
-void Calc(int x)
-{
-	while(x!=1)
-		s[Mn[x]]++,x/=Mn[x];
-}
-int main()
-{
-	scanf(&quot;%d&quot;,&amp;n);
-	GetPri();
-	for(int i=1;i&lt;=n;i++) Calc(i);
-	for(int i=1;i&lt;=n;i++)
-		if(s[i]) printf(&quot;%d %d\n&quot;,i,s[i]);
+	long long L=0,R=0;
+	while(~scanf(&quot;%lld%lld&quot;,&amp;L,&amp;R))
+	{
+		int k=sqrt(R);
+		for(int i=1;i&lt;=R-L+1;i++) s[i]=false;
+		if(L==1) s[1]=true;
+		for(int i=1;i&lt;=cnt;i++)//筛去[L,R]中的合数
+		{
+			if(pri[i]&gt;k) break;
+			for(int j=max((long long)pri[i],L/pri[i]+(L%pri[i]!=0));j&lt;=R/pri[i];j++)
+				s[(long long)pri[i]*j-L+1]=true;
+		}
+		int lx=-1;
+		int ansMn=1e9,ansMx=-1e9;
+		long long x0=0,y0=0,x1=0,y1=0;
+		for(int i=1;i&lt;=R-L+1;i++)//求答案
+			if(!s[i])
+			{
+				if(lx!=-1)
+				{
+					if(i-lx&lt;ansMn) ansMn=i-lx,x0=lx+L-1,y0=i+L-1;
+					if(i-lx&gt;ansMx) ansMx=i-lx,x1=lx+L-1,y1=i+L-1;
+				}
+				lx=i;
+			}
+		if(ansMx&lt;0) printf(&quot;There are no adjacent primes.\n&quot;);
+		else printf(&quot;%lld,%lld are closest, %lld,%lld are most distant.\n&quot;,x0,y0,x1,y1);
+	}
 	return 0;
 }
 </code></pre>
@@ -196,15 +218,21 @@ int main()
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
  
+				<a href="https://wozaixuexi.github.io/tag/FAM-znqKG/" rel="tag">数论</a>	
+				 
+				<a href="https://wozaixuexi.github.io/tag/LwhUeld4OM/" rel="tag">筛法</a>	
+				 
+				<a href="https://wozaixuexi.github.io/tag/M3e6IKc-Z/" rel="tag">题</a>	
+				 
 					</div>						
 <nav class="navigation3 post-navigation3" role="navigation">
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://wozaixuexi.github.io/post/luogup6144-usaco20febhelp-yourself-p/" rel="prev"> LuoguP6144 [USACO20FEB]Help Yourself P</a></div>
+		<div class="wow bounceInLeft nav-previous3"><a href="https://wozaixuexi.github.io/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/" rel="prev"> LuoguP1463 [POI2002][HAOI2007]反素数 | 搜索 数论</a></div>
 		 
 		 
-		<div class="wow bounceInRight nav-next3"><a href="https://wozaixuexi.github.io/post/shu-lun-xiang-guan/" rel="next"> 数论相关</a></div>
+		<div class="wow bounceInRight nav-next3"><a href="https://wozaixuexi.github.io/post/shai-fa-qiu-zhi-shu/" rel="next"> 筛法求质数</a></div>
 		
 		</div>
 	</nav>

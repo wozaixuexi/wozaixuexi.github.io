@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wozaixuexi.github.io</id>
     <title>wozaixuexi</title>
-    <updated>2020-06-01T02:39:47.873Z</updated>
+    <updated>2020-06-01T02:44:17.289Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wozaixuexi.github.io"/>
     <link rel="self" href="https://wozaixuexi.github.io/atom.xml"/>
@@ -119,6 +119,67 @@ int main()
 	scanf(&quot;%d&quot;,&amp;n);
 	dfs(1,Mx,1,1);
 	printf(&quot;%d&quot;,ans);
+	return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UVA10140 Prime Distance | 数论]]></title>
+        <id>https://wozaixuexi.github.io/post/uva10140-prime-distance-or-shu-lun/</id>
+        <link href="https://wozaixuexi.github.io/post/uva10140-prime-distance-or-shu-lun/">
+        </link>
+        <updated>2020-06-01T01:25:51.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/UVA10140">题目链接</a></p>
+<p>观察到，虽然<code>L</code>和<code>R</code>很大，但是<code>R-L</code>不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span>，考虑用筛法筛去<code>[L,R]</code>中的合数，留下质数，然后枚举相邻的两个质数求答案即可。</p>
+<p>一个合数<code>x</code>，至少有一个质因数不超过<code>sqrt(x)</code>。</p>
+<p>所以我们只需要预处理出<code>[1,sqrt(R)]</code>中的所有质数，再拿这些质数筛去<code>[L,R]</code>中的合数，即可得出<code>[L,R]</code>中的质数。</p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cmath&gt;
+	using namespace std;
+	const int N=sqrt((long long)1&lt;&lt;31);
+	int cnt=0,pri[50005],Mn[50005];
+	bool s[1000005];
+int main()
+{
+	for(int i=2;i&lt;=N;i++)//线性筛
+	{
+		if(!Mn[i]) Mn[i]=i,pri[++cnt]=i;
+		for(int j=1;j&lt;=cnt;j++)
+		{
+			if(pri[j]&gt;Mn[i]||pri[j]&gt;N/i) break;
+			Mn[pri[j]*i]=pri[j];
+		}
+	}
+	long long L=0,R=0;
+	while(~scanf(&quot;%lld%lld&quot;,&amp;L,&amp;R))
+	{
+		int k=sqrt(R);
+		for(int i=1;i&lt;=R-L+1;i++) s[i]=false;
+		if(L==1) s[1]=true;
+		for(int i=1;i&lt;=cnt;i++)//筛去[L,R]中的合数
+		{
+			if(pri[i]&gt;k) break;
+			for(int j=max((long long)pri[i],L/pri[i]+(L%pri[i]!=0));j&lt;=R/pri[i];j++)
+				s[(long long)pri[i]*j-L+1]=true;
+		}
+		int lx=-1;
+		int ansMn=1e9,ansMx=-1e9;
+		long long x0=0,y0=0,x1=0,y1=0;
+		for(int i=1;i&lt;=R-L+1;i++)//求答案
+			if(!s[i])
+			{
+				if(lx!=-1)
+				{
+					if(i-lx&lt;ansMn) ansMn=i-lx,x0=lx+L-1,y0=i+L-1;
+					if(i-lx&gt;ansMx) ansMx=i-lx,x1=lx+L-1,y1=i+L-1;
+				}
+				lx=i;
+			}
+		if(ansMx&lt;0) printf(&quot;There are no adjacent primes.\n&quot;);
+		else printf(&quot;%lld,%lld are closest, %lld,%lld are most distant.\n&quot;,x0,y0,x1,y1);
+	}
 	return 0;
 }
 </code></pre>
@@ -296,63 +357,6 @@ int main()
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[UVA10140 Prime Distance]]></title>
-        <id>https://wozaixuexi.github.io/post/uva10140-prime-distance/</id>
-        <link href="https://wozaixuexi.github.io/post/uva10140-prime-distance/">
-        </link>
-        <updated>2020-05-26T10:16:39.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cstdio&gt;
-#include&lt;cmath&gt;
-	using namespace std;
-	const int N=sqrt((long long)1&lt;&lt;31);
-	int cnt=0,pri[50005],Mn[50005];
-	bool s[1000005];
-int main()
-{
-	for(int i=2;i&lt;=N;i++)
-	{
-		if(!Mn[i]) Mn[i]=i,pri[++cnt]=i;
-		for(int j=1;j&lt;=cnt;j++)
-		{
-			if(pri[j]&gt;Mn[i]||pri[j]&gt;N/i) break;
-			Mn[pri[j]*i]=pri[j];
-		}
-	}
-	long long L=0,R=0;
-	while(~scanf(&quot;%lld%lld&quot;,&amp;L,&amp;R))
-	{
-		int k=sqrt(R);
-		for(int i=1;i&lt;=R-L+1;i++) s[i]=false;
-		if(L==1) s[1]=true;
-		for(int i=1;i&lt;=cnt;i++)
-		{
-			if(pri[i]&gt;k) break;
-			for(int j=max((long long)pri[i],L/pri[i]+(L%pri[i]!=0));j&lt;=R/pri[i];j++)
-				s[(long long)pri[i]*j-L+1]=true;
-		}
-		int lx=-1;
-		int ansMn=1e9,ansMx=-1e9;
-		long long x0=0,y0=0,x1=0,y1=0;
-		for(int i=1;i&lt;=R-L+1;i++)
-			if(!s[i])
-			{
-				if(lx!=-1)
-				{
-					if(i-lx&lt;ansMn) ansMn=i-lx,x0=lx+L-1,y0=i+L-1;
-					if(i-lx&gt;ansMx) ansMx=i-lx,x1=lx+L-1,y1=i+L-1;
-				}
-				lx=i;
-			}
-		if(ansMx&lt;0) printf(&quot;There are no adjacent primes.\n&quot;);
-		else printf(&quot;%lld,%lld are closest, %lld,%lld are most distant.\n&quot;,x0,y0,x1,y1);
-	}
-	return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[数论相关]]></title>
         <id>https://wozaixuexi.github.io/post/shu-lun-xiang-guan/</id>
         <link href="https://wozaixuexi.github.io/post/shu-lun-xiang-guan/">
@@ -360,6 +364,7 @@ int main()
         <updated>2020-05-26T06:52:48.000Z</updated>
         <content type="html"><![CDATA[<h2 id="质数的判定">质数的判定</h2>
 <p>不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>的质数大约有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>n</mi><mrow><mi>ln</mi><mo>⁡</mo><mi>n</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{n}{\ln n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.7935600000000003em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">ln</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>个。</p>
+<p><a href="https://wozaixuexi.github.io/post/shai-fa-qiu-zhi-shu/">筛法求质数</a></p>
 <h2 id="质因数分解">质因数分解</h2>
 <p>在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>2</mn><mo separator="true">,</mo><mo>⌊</mo><msqrt><mi>n</mi></msqrt><mo>⌋</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">[2,\lfloor \sqrt{n}\rfloor]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.05028em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">⌊</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">n</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
 -10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
