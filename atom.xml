@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wozaixuexi.github.io</id>
     <title>wozaixuexi</title>
-    <updated>2020-06-03T06:22:12.977Z</updated>
+    <updated>2020-06-03T09:30:52.853Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wozaixuexi.github.io"/>
     <link rel="self" href="https://wozaixuexi.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://wozaixuexi.github.io/images/avatar.png</logo>
     <icon>https://wozaixuexi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, wozaixuexi</rights>
+    <entry>
+        <title type="html"><![CDATA[中国剩余定理]]></title>
+        <id>https://wozaixuexi.github.io/post/zhong-guo-sheng-yu-ding-li/</id>
+        <link href="https://wozaixuexi.github.io/post/zhong-guo-sheng-yu-ding-li/">
+        </link>
+        <updated>2020-06-03T09:26:52.000Z</updated>
+        <content type="html"><![CDATA[<p>12312312</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[线性基]]></title>
         <id>https://wozaixuexi.github.io/post/xian-xing-ji/</id>
@@ -376,67 +385,6 @@ int main()
 	scanf(&quot;%d&quot;,&amp;n);
 	dfs(1,Mx,1,1);
 	printf(&quot;%d&quot;,ans);
-	return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[UVA10140 Prime Distance | 数论]]></title>
-        <id>https://wozaixuexi.github.io/post/uva10140-prime-distance-or-shu-lun/</id>
-        <link href="https://wozaixuexi.github.io/post/uva10140-prime-distance-or-shu-lun/">
-        </link>
-        <updated>2020-06-01T01:25:51.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/UVA10140">题目链接</a></p>
-<p>观察到，虽然<code>L</code>和<code>R</code>很大，但是<code>R-L</code>不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span>，考虑用筛法筛去<code>[L,R]</code>中的合数，留下质数，然后枚举相邻的两个质数求答案即可。</p>
-<p>一个合数<code>x</code>，至少有一个质因数不超过<code>sqrt(x)</code>。</p>
-<p>所以我们只需要预处理出<code>[1,sqrt(R)]</code>中的所有质数，再拿这些质数筛去<code>[L,R]</code>中的合数，即可得出<code>[L,R]</code>中的质数。</p>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cstdio&gt;
-#include&lt;cmath&gt;
-	using namespace std;
-	const int N=sqrt((long long)1&lt;&lt;31);
-	int cnt=0,pri[50005],Mn[50005];
-	bool s[1000005];
-int main()
-{
-	for(int i=2;i&lt;=N;i++)//线性筛
-	{
-		if(!Mn[i]) Mn[i]=i,pri[++cnt]=i;
-		for(int j=1;j&lt;=cnt;j++)
-		{
-			if(pri[j]&gt;Mn[i]||pri[j]&gt;N/i) break;
-			Mn[pri[j]*i]=pri[j];
-		}
-	}
-	long long L=0,R=0;
-	while(~scanf(&quot;%lld%lld&quot;,&amp;L,&amp;R))
-	{
-		int k=sqrt(R);
-		for(int i=1;i&lt;=R-L+1;i++) s[i]=false;
-		if(L==1) s[1]=true;
-		for(int i=1;i&lt;=cnt;i++)//筛去[L,R]中的合数
-		{
-			if(pri[i]&gt;k) break;
-			for(int j=max((long long)pri[i],L/pri[i]+(L%pri[i]!=0));j&lt;=R/pri[i];j++)
-				s[(long long)pri[i]*j-L+1]=true;
-		}
-		int lx=-1;
-		int ansMn=1e9,ansMx=-1e9;
-		long long x0=0,y0=0,x1=0,y1=0;
-		for(int i=1;i&lt;=R-L+1;i++)//求答案
-			if(!s[i])
-			{
-				if(lx!=-1)
-				{
-					if(i-lx&lt;ansMn) ansMn=i-lx,x0=lx+L-1,y0=i+L-1;
-					if(i-lx&gt;ansMx) ansMx=i-lx,x1=lx+L-1,y1=i+L-1;
-				}
-				lx=i;
-			}
-		if(ansMx&lt;0) printf(&quot;There are no adjacent primes.\n&quot;);
-		else printf(&quot;%lld,%lld are closest, %lld,%lld are most distant.\n&quot;,x0,y0,x1,y1);
-	}
 	return 0;
 }
 </code></pre>

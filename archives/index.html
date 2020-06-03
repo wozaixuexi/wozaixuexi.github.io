@@ -1,916 +1,516 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+<meta HTTP-EQUIV="expires" CONTENT="0"> 
+<title>wozaixuexi</title>	
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
-<meta name="description" content="qwq">
-<meta name="theme-color" content="">
-<title>wozaixuexi</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1591164028354">
-<link rel="stylesheet" href="/media/css/pisces.css">
-<link rel="stylesheet" href="/media/fonts/font-awesome.css">
-<link
-  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
-  rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://wozaixuexi.github.io/styles/main.css">
+<script type="text/javascript">
+function getCSS()
+{
+        datetoday = new Date();
+        timenow=datetoday.getTime();
+        datetoday.setTime(timenow);
+        thehour = datetoday.getHours();
 
-<link href="/media/hljs/styles/github.css"
-  rel="stylesheet">
+        if (thehour<6:30)
 
-<link rel="stylesheet" href="/styles/main.css">
+            display = "https://wozaixuexi.github.io/media/css/night.css";
 
-<script src="/media/hljs/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+       else if (thehour>18:30)
+
+            display = "https://wozaixuexi.github.io/media/css/night.css";   
+
+        else if (thehour>6:30)
+           
+            display = "https://wozaixuexi.github.io/media/css/day.css";
+
+        else if (thehour<18:30)
+
+            display = "https://wozaixuexi.github.io/media/css/day.css";
+      
+
+var css = '<';
+        css+='link rel="stylesheet" href='+display+' \/';
+        css+='>';
+        document.write(css);
+}
+</script>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+<link href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script type='text/javascript' src='https://wozaixuexi.github.io/media/scripts/script.js'></script>
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+  <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>wow=new WOW({boxClass:'wow',animateClass:'animated',offset:0,mobile:true,live:true});wow.init();</script>
+
+<script type="text/javascript">
+window.onload=getCSS();
+</script>
 
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
-
-
-
-
-
-  <meta name="description" content="qwq">
 </head>
-
-<body>
-  <div class="head-top-line"></div>
-  <div class="header-box">
+<body class="post-template-default single single-post postid-70 single-format-standard">
+    <div id="wrapper">
+   
+			<header id="header" class="site-header" >
+			<div class="site-branding">
+									<h1 class="site-title"><a href="https://wozaixuexi.github.io" rel="home">wozaixuexi</a></h1>
+										
+					<h2 class="site-description">qwq</h2>
+										
+							</div>
+			<nav id="nav-wrapper">
+				<div class="container">
+					<div class="nav-toggle">
+						<div class="bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<ul class="dove">
+		 
+     			
+<li>
+	 
+	<a  href="/"> 首页</a></li>
+	
     
-<div class="pisces">
-  <header class="header  ">
-    <div class="blog-header box-shadow-wrapper bg-color " id="header">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
+     			
+<li>
+	 
+	<a  href="/archives"> 归档</a></li>
+	
+    
+     			
+<li>
+	 
+	<a  href="/tags"> 标签</a></li>
+	
+    
+     			
+<li>
+	 
+	<a  href="/post/about"> 关于</a></li>
+	
+    
+
+</ul>
+</li>		
+		
+</ul>				</div>
+			</nav>
+
+<div class="jingge">
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        </header>
+
+		<div id="content" class="container">
+			<div class="row">
+	<div class="col-md-8 site-main" id="archives">
+					
+
+	<div class="wow bounceInLeft" id="archives-tags">
+        <h3>标签云</h3>
+
+               <a class="itags" href="https://wozaixuexi.github.io/tag/lfeHFs-sX/">欧拉函数</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/zjjb2A79-h/">欧拉定理</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/FAM-znqKG/">数论</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/WNtiQtH2v/">算法</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/d6e7kh9sq/">扩展欧几里得</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/j1X0Z-4U-/">整除分块</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/M3e6IKc-Z/">题</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/tD4VoU30-/">搜索</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/LwhUeld4OM/">筛法</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/hKfMO9FGQ/">CDQ分治</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/EkHw6Thow/">动态规划</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/YBZExerlgu/">斜率优化</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/PeTsm4N39/">模拟退火</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/x6PcyBEb_/">dp</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/c_2yDCkjW/">平衡树</a>
+               
+               <a class="itags" href="https://wozaixuexi.github.io/tag/2whtwNALDo/">二项式定理</a>
+                           
+                        </div>
+
+
+    <div class="wow bounceInRight" id="archives-content">
+        <br>
+		
+
+                <div class="archive-title" >
+					
+            <div class="archives" >
+				 
+                <h3>2020</h3>
+					
+					 
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/zhong-guo-sheng-yu-ding-li/">
+                            <span class="time">2020-06-03</span> 中国剩余定理                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/xian-xing-ji/">
+                            <span class="time">2020-06-03</span> 线性基                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/polya-ding-li-ji-qi-ying-yong/">
+                            <span class="time">2020-06-03</span> Pólya定理及其应用                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/yi-chong-li-yong-kai-ping-fang-suo-xiao-gui-mo-jin-xing-fen-zhi-de-suan-fa/">
+                            <span class="time">2020-06-03</span> 根号分治                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/dong-tai-shu-de-yi-chong-link-cut-tree/">
+                            <span class="time">2020-06-03</span> 动态树的一种：Link-Cut Tree                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/mo-bi-wu-si-fan-yan/">
+                            <span class="time">2020-06-03</span> 莫比乌斯反演                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/ou-la-han-shu-yu-ou-la-ding-li/">
+                            <span class="time">2020-06-02</span> 欧拉函数与欧拉定理                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/kuo-zhan-ou-ji-li-de-suan-fa/">
+                            <span class="time">2020-06-01</span> 扩展欧几里得算法                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup2261-cqoi2007yu-shu-qiu-he-or-zheng-chu-fen-kuai/">
+                            <span class="time">2020-06-01</span> LuoguP2261 [CQOI2007]余数求和 | 整除分块                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/">
+                            <span class="time">2020-06-01</span> LuoguP1463 [POI2002][HAOI2007]反素数 | 搜索 数论                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/uva10140-prime-distance-or-shu-lun/">
+                            <span class="time">2020-06-01</span> UVA10140 Prime Distance | 数论                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/shai-fa-qiu-zhi-shu/">
+                            <span class="time">2020-05-28</span> 筛法求质数                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogu-p2568-gcd/">
+                            <span class="time">2020-05-27</span> Luogu P2568 GCD                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup6144-usaco20febhelp-yourself-p/">
+                            <span class="time">2020-05-26</span> LuoguP6144 [USACO20FEB]Help Yourself P                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/nc51043-jie-cheng-fen-jie/">
+                            <span class="time">2020-05-26</span> NC51043 阶乘分解                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/shu-lun-xiang-guan/">
+                            <span class="time">2020-05-26</span> 数论相关                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup4027-noi2007huo-bi-dui-huan-or-cdq-fen-zhi-xie-lu-you-hua/">
+                            <span class="time">2020-05-26</span> LuoguP4027 [NOI2007]货币兑换 | CDQ分治 斜率优化                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup5785sdoi2012ren-wu-an-pai-or-xie-lu-you-hua/">
+                            <span class="time">2020-05-24</span> LuoguP5785[SDOI2012]任务安排 | 斜率优化                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/dp-de-you-hua/">
+                            <span class="time">2020-05-22</span> 对于1D/1D的动态规划的优化                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/wang-luo-liu-xiao-jie/">
+                            <span class="time">2020-05-22</span> 网络流小结                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup3936-coloring-or-mo-ni-tui-huo/">
+                            <span class="time">2020-05-20</span> LuoguP3936 Coloring | 模拟退火                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup2538-scoi2008cheng-bao-or-mo-ni-tui-huo/">
+                            <span class="time">2020-05-20</span> LuoguP2538 [SCOI2008]城堡 | 模拟退火                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup2503-haoi2006jun-fen-shu-ju-or-dp-mo-ni-tui-huo/">
+                            <span class="time">2020-05-20</span> LuoguP2503 [HAOI2006]均分数据 | dp 模拟退火                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/luogup1337-jsoi2004ping-heng-dian-diao-da-xxx-or-mo-ni-tui-huo/">
+                            <span class="time">2020-05-20</span> LuoguP1337 [JSOI2004]平衡点 吊打XXX | 模拟退火                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/mo-ni-tui-huo-xiao-jie/">
+                            <span class="time">2020-05-20</span> 模拟退火小结                        </a>
+                    </div>
+                            
+                             
+      
+                                    <div class="brick">
+                        <a href="https://wozaixuexi.github.io/post/spoj-gss8-can-you-answer-these-queries-viii-or-ping-heng-shu/">
+                            <span class="time">2020-05-20</span> SPOJ GSS8 - Can you answer these queries VIII | 平衡树                        </a>
+                    </div>
+                            
+                             
+								
+                            </div>
+																	   
+																   
         </div>
-      </div>
-      <div class="site-meta">       
-        <div class="site-title">
-          
-            <a href="/" class="brand">
-              <span>wozaixuexi</span>
-            </a>  
-          
-        </div>
+               
         
-      </div>
-      <nav class="site-nav" id="site_nav">
-        <ul id="nav_ul">
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/" target="_self">
-                  <i class="fa fa-home"></i> 首页
-                </a>
-              
-            </li>
-          
-            
-            
-            <li class="nav-item nav-item-active">
-              
-              
-                <a href="/archives/" target="_self">
-                  <i class="fa fa-archive"></i> 归档
-                </a>
-              
-            </li>
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/tags/" target="_self">
-                  <i class="fa fa-tags"></i> 标签
-                </a>
-              
-            </li>
-          
-            
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/post/about/" target="_self">
-                  <i class="fa fa-user"></i> 关于
-                </a>
-              
-            </li>
-          
-          
-          
-        </ul>
-      </nav>
-    </div>
-  </header>
-</div>
 
-<script type="text/javascript"> 
- 
-  let showNav = true;
-
-  let navToggle = document.querySelector('#nav_toggle'),
-  siteNav = document.querySelector('#site_nav');
-  
-  function navClick() {
-    let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-    if (siteNav.classList.contains('nav-menu-active')) {
-      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
-    } else {
-      siteNav.style = "";
-    }
-  }
-
-  navToggle.addEventListener('click',navClick);  
-</script>
-  </div>
-  <div class="main-continer">
-    
-    <div
-      class="section-layout  pisces">
-      <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name"></p>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
+            </div>
+		
+		
+			</div>
         
-        <span class="site-item-stat-count">25</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">16</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">16</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-  
-  
+<nav class="navigation pagination" role="navigation">
+		
+			
+	</nav>	
 
-  
+			</div><!-- #end row-->
+		</div><!-- #end container-->
 
+		
+		 	<footer id="colophon" class="site-footer">
 
-
-  <div style="width: 100%; position: relative;">
-    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
-    <script src="/media/js/magic/clock.js"></script>
-  </div>
+			<div class="container">
+	
+				<div class="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a><br>Theme:   <a href="https://github.com/shanbufun/gridea-theme-pan" target="_blank" title="Pan"><span>Pan</span></a>.  by <a href="https://shanbu.fun/" target="_blank"  title="山卜方" >Shanbufun</a></div>		
+			</div>
+		
+		</footer>
 
 </div>
-</div>
-<script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = '';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
-      }
-    });
-  }
-  </script>
-        <div class="section-box box-shadow-wrapper">
-          <section class="section archives-section bg-color posts-expand">
-            
 
-<div class="bg-color">
-  <div class="archive-timeline-box">
-    <div class="archive-timeline-title">
-      
-        <h2 class="language" data-lan="archives" data-count="25">非常好！目前共计25篇日志，继续努力！</h2>
-      
-    </div>
-    
-      
-      
-        <div class="node-title">
-          <h2 class="tag-year">2020</h2>
-        </div>    
-        
-      
-      <a href="https://wozaixuexi.github.io/post/xian-xing-ji/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-03
-              <small>线性基</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/polya-ding-li-ji-qi-ying-yong/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-03
-              <small>Pólya定理及其应用</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/yi-chong-li-yong-kai-ping-fang-suo-xiao-gui-mo-jin-xing-fen-zhi-de-suan-fa/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-03
-              <small>根号分治</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/dong-tai-shu-de-yi-chong-link-cut-tree/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-03
-              <small>动态树的一种：Link-Cut Tree</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/mo-bi-wu-si-fan-yan/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-03
-              <small>莫比乌斯反演</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/ou-la-han-shu-yu-ou-la-ding-li/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-02
-              <small>欧拉函数与欧拉定理</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/kuo-zhan-ou-ji-li-de-suan-fa/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-01
-              <small>扩展欧几里得算法</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup2261-cqoi2007yu-shu-qiu-he-or-zheng-chu-fen-kuai/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-01
-              <small>LuoguP2261 [CQOI2007]余数求和 | 整除分块</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-01
-              <small>LuoguP1463 [POI2002][HAOI2007]反素数 | 搜索 数论</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/uva10140-prime-distance-or-shu-lun/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              06-01
-              <small>UVA10140 Prime Distance | 数论</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/shai-fa-qiu-zhi-shu/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-28
-              <small>筛法求质数</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogu-p2568-gcd/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-27
-              <small>Luogu P2568 GCD</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup6144-usaco20febhelp-yourself-p/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-26
-              <small>LuoguP6144 [USACO20FEB]Help Yourself P</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/nc51043-jie-cheng-fen-jie/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-26
-              <small>NC51043 阶乘分解</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/shu-lun-xiang-guan/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-26
-              <small>数论相关</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup4027-noi2007huo-bi-dui-huan-or-cdq-fen-zhi-xie-lu-you-hua/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-26
-              <small>LuoguP4027 [NOI2007]货币兑换 | CDQ分治 斜率优化</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup5785sdoi2012ren-wu-an-pai-or-xie-lu-you-hua/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-24
-              <small>LuoguP5785[SDOI2012]任务安排 | 斜率优化</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/dp-de-you-hua/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-22
-              <small>对于1D/1D的动态规划的优化</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/wang-luo-liu-xiao-jie/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-22
-              <small>网络流小结</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup3936-coloring-or-mo-ni-tui-huo/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-20
-              <small>LuoguP3936 Coloring | 模拟退火</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup2538-scoi2008cheng-bao-or-mo-ni-tui-huo/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-20
-              <small>LuoguP2538 [SCOI2008]城堡 | 模拟退火</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup2503-haoi2006jun-fen-shu-ju-or-dp-mo-ni-tui-huo/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-20
-              <small>LuoguP2503 [HAOI2006]均分数据 | dp 模拟退火</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/luogup1337-jsoi2004ping-heng-dian-diao-da-xxx-or-mo-ni-tui-huo/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-20
-              <small>LuoguP1337 [JSOI2004]平衡点 吊打XXX | 模拟退火</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/mo-ni-tui-huo-xiao-jie/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-20
-              <small>模拟退火小结</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://wozaixuexi.github.io/post/spoj-gss8-can-you-answer-these-queries-viii-or-ping-heng-shu/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-20
-              <small>SPOJ GSS8 - Can you answer these queries VIII | 平衡树</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-  </div>
-  
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/archives/page/../">
-              1
-            </a>
-        </li>
-      
-    
-    
-  </ul>
-</div>
-</div>
+<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+<script type='text/javascript' src='https://wozaixuexi.github.io/media/scripts/marlin-scripts.js'></script>
+ <script src="//tokinx.github.io/lately/lately.min.js"></script>
+  <script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
+  <style type="text/css">a.back_to_top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+}
 
-          </section>
-        </div>
-      </div>
-    </div>
-    <div class="footer-box">
-  <footer class="footer">
-    <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
-        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
-    </div>
-    <div class="poweredby">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </div>
-  </footer>
-  
-  
-  <div class="pisces back-to-top" id="back_to_top">
-    <i class="fa fa-arrow-up"></i>
-    
-    <span class="scrollpercent">
-      <span id="back_to_top_text">0</span>%
-    </span>
-    
-  </div>
-  
-  
-  
-  
-  
-  
-  
+a.back_to_top span {
+    color: #888;
+}
 
-  
-</div>
-<script>
+a.back_to_top:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+}
 
-  let sideBarOpen = 'sidebar-open';
-  let body = document.body;
-  let back2Top = document.querySelector('#back_to_top'),
-    back2TopText = document.querySelector('#back_to_top_text'),
-    drawerBox = document.querySelector('#drawer_box'),
-    rightSideBar = document.querySelector('.sidebar'),
-    viewport = document.querySelector('body');
+a.back_to_top:hover span {
+    color: #555;
+}
 
-  function scrollAnimation(currentY, targetY) {
-
-    let needScrollTop = targetY - currentY
-    let _currentY = currentY
-    setTimeout(() => {
-      const dist = Math.ceil(needScrollTop / 10)
-      _currentY += dist
-      window.scrollTo(_currentY, currentY)
-      if (needScrollTop > 10 || needScrollTop < -10) {
-        scrollAnimation(_currentY, targetY)
-      } else {
-        window.scrollTo(_currentY, targetY)
-      }
-    }, 1)
-  }
-
-  back2Top.addEventListener("click", function (e) {
-    scrollAnimation(document.scrollingElement.scrollTop, 0);
-    e.stopPropagation();
-    return false;
-  });
-
-  window.addEventListener('scroll', function (e) {
-    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
-    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
-      back2Top.classList.add('back-top-active');
+@media print, screen and (max-width: 580px) {
+    .back_to_top {
+        display: none !important;
     }
-    if (percent == 0) {
-      back2Top.classList.remove('back-top-active');
-    }
-    if (back2TopText) {
-      back2TopText.textContent = Math.floor(percent);
-    }
-  });
+}
 
 
-  let hasCacu = false;
-  window.onresize = function () {
-    calcuHeight();
-  }
 
-  function calcuHeight() {
-    // 动态调整站点概览高度
-    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
-      let sideBar = document.querySelector('.sidebar');
-      let navUl = document.querySelector('#site_nav');
-      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
-      hasCacu = true;
-    }
-  }
-  calcuHeight();
+</style><a id="back_to_top" href="#" class="back_to_top"><span><i class="iconfont icon-xiangshang"></i></span>
+</a>
 
-  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
 
-  if (drawerBox) {
-    let rightMotions = document.querySelectorAll('.right-motion');
-    let right = drawerBox.classList.contains('right');
-
-    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
-
-    let openProp, closeProp;
-    if (right) {
-      openProp = {
-        paddingRight: RIGHT_MOVE_DIS
-      };
-      closeProp = {
-        paddingRight: '0px'
-      };
-    } else {
-      openProp = {
-        paddingLeft: RIGHT_MOVE_DIS
-      };
-      closeProp = {
-        paddingLeft: '0px'
-      };
-    }
-
-    drawerBox.onclick = function () {
-      open = !open;
-      window.Velocity(rightSideBar, 'stop');
-      window.Velocity(viewport, 'stop');
-      window.Velocity(rightMotions, 'stop');
-      if (open) {
-        window.Velocity(rightSideBar, {
-          width: RIGHT_MOVE_DIS
-        }, {
-          duration: MOTION_TIME,
-          begin: function () {
-            window.Velocity(rightMotions, transitionDir, {});
-          }
-        })
-        window.Velocity(viewport, openProp, {
-          duration: MOTION_TIME
-        });
-      } else {
-        window.Velocity(rightSideBar, {
-          width: '0px'
-        }, {
-          duration: MOTION_TIME,
-          begin: function () {
-            window.Velocity(rightMotions, {
-              opacity: 0
-            });
-          }
-        })
-        window.Velocity(viewport, closeProp, {
-          duration: MOTION_TIME
-        });
-      }
-      for (let i = 0; i < drawerBox.children.length; i++) {
-        drawerBox.children[i].classList.toggle('muse-line');
-      }
-      drawerBox.classList.toggle(sideBarOpen);
-    }
-  }
-
-  // 链接跳转
-  let newWindow = ''
-  if (newWindow === 'true') {
-    let links = document.querySelectorAll('.post-body a')
-    links.forEach(item => {
-      if (!item.classList.contains('btn')) {
-        item.setAttribute("target", "_blank");
-      }
-    })
-  }
-
-  let faSearch = document.querySelector('#fa_search');
-  faSearch.addEventListener('click', function () {
-    document.querySelector('#search_mask').style = ''
-  })
-
-  // 代码高亮
-  hljs.initHighlightingOnLoad();
-  
-  // 离开当前页title变化
-  var leaveTitle = '';
-  if (leaveTitle) {
-    document.addEventListener('visibilitychange', function () {
-      if (document.visibilityState == 'hidden') {
-        normal_title = document.title;
-        document.title = leaveTitle;
-      } else {
-        document.title = normal_title;
-      }
-    });
-  }
-
-</script>
-  </div>
-</body>
-
-<input hidden id="copy" />
-<script>
-  let language = '';
-  if (language !== '') {
-    let map = new Map();
-    if (language === 'en') {
-      map.set('search', 'Search');
-      map.set('category', 'Categories');
-      map.set('article', 'Articles');
-      map.set('tag', 'Tags');
-      map.set('top', 'Top');
-      map.set('publish', 'published');
-      map.set('minute', ' minutes');
-      map.set('read-more', 'Read More');
-      map.set('view', 'View');
-      map.set('words', ' words');
-      map.set('category-in', 'category in');
-      map.set('preview', 'Meta');
-      map.set('index', 'Toc');
-      map.set('no-archives', "You haven't created yet");
-      map.set('archives', " articles in total");
-      map.set('cloud-tags', " tags in total");
-      map.set('copyright', "Copyright: ");
-      map.set('author', "Author: ");
-      map.set('link', "Link: ");
-      map.set('leave-message', "Leave a message");
-      map.set('format', "Links Format");
-      map.set('site-name', "Name: ");
-      map.set('site-link', "Link: ");
-      map.set('site-desc', "Desc: ");
-      map.set('stat', " related results, taking ");
-      map.set('stat-time', " ms");
-      map.set('site-img', "Image: ");
-    }
-
-    if (map.size > 0) {
-      let lanElems = document.querySelectorAll('.language');
-      lanElems.forEach(elem => {
-        let lan = elem.dataset.lan, text = map.get(lan);
-        if (elem.__proto__ === HTMLInputElement.prototype) {
-          elem.placeholder = text
+<script>$(document).ready((function(_this) {
+  return function() {
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          return bt.css('display', 'block');
         } else {
-          if (elem.dataset.count) {
-            text = elem.dataset.count + text;
-          }
-          elem.textContent = text;
+          return bt.css('display', 'none');
         }
-      })
+      });
+      return bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
     }
-  }
-  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-  window.Clipboard = (function (window, document, navigator) {
-    var textArea,
-      copy;
-
-    // 判断是不是ios端
-    function isOS() {
-      return navigator.userAgent.match(/ipad|iphone/i);
-    }
-    //创建文本元素
-    function createTextArea(text) {
-      textArea = document.createElement('textArea');
-      textArea.value = text;
-      textArea.style.width = 0;
-      textArea.style.height = 0;
-      textArea.clientHeight = 0;
-      textArea.clientWidth = 0;
-      document.body.appendChild(textArea);
-    }
-    //选择内容
-    function selectText() {
-      var range,
-        selection;
-
-      if (isOS()) {
-        range = document.createRange();
-        range.selectNodeContents(textArea);
-        selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        textArea.setSelectionRange(0, 999999);
-      } else {
-        textArea.select();
-      }
-    }
-
-    //复制到剪贴板
-    function copyToClipboard() {
-      try {
-        document.execCommand("Copy")
-      } catch (err) {
-        alert("复制错误！请手动复制！")
-      }
-      document.body.removeChild(textArea);
-    }
-
-    copy = function (text) {
-      createTextArea(text);
-      selectText();
-      copyToClipboard();
-    };
-
-    return {
-      copy: copy
-    };
-  })(window, document, navigator);
-
-  function copyCode(e) {
-    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-      let code = e.currentTarget.querySelector('code');
-      var text = code.innerText;
-      if (e.srcElement.textContent === '复制成功') {
-        console.log('复制操作频率过高');
-        return;
-      }
-      e.srcElement.textContent = '复制成功';
-      (function (elem) {
-        setTimeout(() => {
-          if (elem.textContent === '复制成功') {
-            elem.textContent = '复制代码'
-          }
-        }, 1000);
-      })(e.srcElement)
-      Clipboard.copy(text);
-    }
-  }
-
-  let pres = document.querySelectorAll('pre');
-  pres.forEach(pre => {
-    let code = pre.querySelector('code');
-    let copyElem = document.createElement('span');
-    copyElem.classList.add('copy-code');
-    copyElem.textContent = '复制代码';
-    pre.appendChild(copyElem);
-    pre.onclick = copyCode
-  })
-
-</script>
-<script src="/media/js/motion.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200
-  });
+  };
+})(this));
 </script>
 
-
-
-
+		<script type="text/javascript">
+//点击加载更多
+jQuery(document).ready(function($) {
+    //点击下一页的链接(即那个a标签)
+    $(' .next').click(function() {
+        $this = $(this);
+        $this.addClass('loading').text('正在努力加载'); //给a标签加载一个loading的class属性，用来添加加载效果
+        var href = $this.attr('href'); //获取下一页的链接地址
+        if (href != undefined) { //如果地址存在
+            $.ajax({ //发起ajax请求
+                url: href,
+                //请求的地址就是下一页的链接
+                type: 'get',
+                //请求类型是get
+                error: function(request) {
+                    //如果发生错误怎么处理
+                },
+                success: function(data) { //请求成功
+                    $this.removeClass('loading').text('点击查看更多'); //移除loading属性
+                    var $res = $(data).find('.time-section '); //从数据中挑出文章数据，请根据实际情况更改
+                    $('.archives').append($res.fadeIn(500)); //将数据加载加进posts-loop的标签中。
+                    var newhref = $(data).find(' .next').attr('href'); //找出新的下一页链接
+                    if (newhref != undefined) {
+                        $('.next').attr('href', newhref);
+                    } else {
+                        $('.next').remove(); //如果没有下一页了，隐藏
+                    }
+                }
+            });
+        }
+        return false;
+    });
+});
+</script>
+</body>
 </html>

@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>LuoguP2503 [HAOI2006]均分数据 | dp 模拟退火 | wozaixuexi</title>	
+<title>中国剩余定理 | wozaixuexi</title>	
 
 <link rel="stylesheet" href="https://wozaixuexi.github.io/styles/main.css">
 <script type="text/javascript">
@@ -150,10 +150,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">LuoguP2503 [HAOI2006]均分数据 | dp 模拟退火</h1>
+			<h1 class="wow swing entry-title">中国剩余定理</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-05-20 20:42:25" itemprop="datePublished" pubdate="">2020-05-20</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-06-03 17:26:52" itemprop="datePublished" pubdate="">2020-06-03</time></i>
 	          </div>
 			
 </span>
@@ -161,87 +161,18 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<h4 id="题目链接"><a href="https://www.luogu.com.cn/problem/P2503">题目链接</a></h4>
-<p>分组问题，每一组不一定是连续的一段。并不会做。<br>
-然而如果每一组都是连续的的一段，就可以用<code>dp</code>解决。<br>
-所以我们可以每次构造一个新的顺序，通过<code>dp</code>来计算。<br>
-然后就可以退火了。</p>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cstdio&gt;
-#include&lt;cmath&gt;
-#include&lt;cstdlib&gt;
-	using namespace std;
-	const double MnT=1e-7;
-	const double DeltaT=0.998;
-	int n=0,m=0,a[25],s[25],g[25]; 
-	double PJS=0,AnsW=0,f[25][25];
-	bool c[25];
-double Calc()
-{
-	for(int i=1;i&lt;=n;i++) s[i]=s[i-1]+a[i];
-	for(int i=0;i&lt;=m;i++)
-		for(int j=0;j&lt;=n;j++)
-			f[i][j]=1e18;
-	f[0][0]=0;
-	for(int i=1;i&lt;=m;i++)
-		for(int j=i;j&lt;=n;j++)
-			for(int k=j-1;k&gt;=i-1;k--)
-			{
-				double w=PJS-(s[j]-s[k]);
-				f[i][j]=min(f[i][j],f[i-1][k]+w*w);
-			}
-	return sqrt(f[m][n]/m);
-}
-void SA()
-{
-	double Ans=Calc();
-	double T=1000;
-	while(T&gt;MnT)
-	{
-		int x0=rand()%(n-1)+1;
-		int y0=rand()%(n-x0)+x0+1;
-		swap(a[x0],a[y0]);
-		double Ans0=Calc();
-		double Delta=Ans-Ans0;
-		AnsW=min(AnsW,Ans0);
-		if(Delta&gt;0) Ans=Ans0;
-		else if(rand()&lt;RAND_MAX*exp(Delta/T)) Ans=Ans0;
-		else swap(a[x0],a[y0]);
-		T*=DeltaT;
-	}
-}
-int main()
-{
-	srand(233333); 
-	scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
-	for(int i=1;i&lt;=n;i++)
-		scanf(&quot;%d&quot;,&amp;a[i]),PJS+=a[i];
-	PJS/=m;
-	AnsW=Calc();
-	if(n&gt;1) for(int i=1;i&lt;=3;i++) SA();
-	printf(&quot;%.2lf&quot;,AnsW);
-	return 0;
-}
-</code></pre>
+				<p>12312312</p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
  
-				<a href="https://wozaixuexi.github.io/tag/x6PcyBEb_/" rel="tag">dp</a>	
-				 
-				<a href="https://wozaixuexi.github.io/tag/PeTsm4N39/" rel="tag">模拟退火</a>	
-				 
-				<a href="https://wozaixuexi.github.io/tag/M3e6IKc-Z/" rel="tag">题</a>	
-				 
 					</div>						
 <nav class="navigation3 post-navigation3" role="navigation">
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://wozaixuexi.github.io/post/luogup2538-scoi2008cheng-bao-or-mo-ni-tui-huo/" rel="prev"> LuoguP2538 [SCOI2008]城堡 | 模拟退火</a></div>
 		 
-		 
-		<div class="wow bounceInRight nav-next3"><a href="https://wozaixuexi.github.io/post/luogup1337-jsoi2004ping-heng-dian-diao-da-xxx-or-mo-ni-tui-huo/" rel="next"> LuoguP1337 [JSOI2004]平衡点 吊打XXX | 模拟退火</a></div>
+		<div class="wow bounceInRight nav-next3"><a href="https://wozaixuexi.github.io/post/xian-xing-ji/" rel="next"> 线性基</a></div>
 		
 		</div>
 	</nav>
