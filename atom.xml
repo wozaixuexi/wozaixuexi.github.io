@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://wozaixuexi.github.io</id>
     <title>wzxx&apos;s blog</title>
-    <updated>2020-06-06T01:13:19.532Z</updated>
+    <updated>2020-06-06T01:15:53.276Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://wozaixuexi.github.io"/>
+    <link rel="self" href="https://wozaixuexi.github.io/atom.xml"/>
     <subtitle>qwq</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://wozaixuexi.github.io/images/avatar.png</logo>
+    <icon>https://wozaixuexi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, wzxx&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[中国剩余定理]]></title>
-        <id>http://localhost:4000/post/zhong-guo-sheng-yu-ding-li/</id>
-        <link href="http://localhost:4000/post/zhong-guo-sheng-yu-ding-li/">
+        <id>https://wozaixuexi.github.io/post/zhong-guo-sheng-yu-ding-li/</id>
+        <link href="https://wozaixuexi.github.io/post/zhong-guo-sheng-yu-ding-li/">
         </link>
         <updated>2020-06-03T09:26:52.000Z</updated>
         <content type="html"><![CDATA[<p>12312312</p>
@@ -21,8 +21,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[线性基]]></title>
-        <id>http://localhost:4000/post/xian-xing-ji/</id>
-        <link href="http://localhost:4000/post/xian-xing-ji/">
+        <id>https://wozaixuexi.github.io/post/xian-xing-ji/</id>
+        <link href="https://wozaixuexi.github.io/post/xian-xing-ji/">
         </link>
         <updated>2020-06-03T04:19:07.000Z</updated>
         <content type="html"><![CDATA[<p>123</p>
@@ -30,8 +30,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Pólya定理及其应用]]></title>
-        <id>http://localhost:4000/post/polya-ding-li-ji-qi-ying-yong/</id>
-        <link href="http://localhost:4000/post/polya-ding-li-ji-qi-ying-yong/">
+        <id>https://wozaixuexi.github.io/post/polya-ding-li-ji-qi-ying-yong/</id>
+        <link href="https://wozaixuexi.github.io/post/polya-ding-li-ji-qi-ying-yong/">
         </link>
         <updated>2020-06-03T03:43:41.000Z</updated>
         <content type="html"><![CDATA[<p>123231</p>
@@ -39,8 +39,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[根号分治]]></title>
-        <id>http://localhost:4000/post/yi-chong-li-yong-kai-ping-fang-suo-xiao-gui-mo-jin-xing-fen-zhi-de-suan-fa/</id>
-        <link href="http://localhost:4000/post/yi-chong-li-yong-kai-ping-fang-suo-xiao-gui-mo-jin-xing-fen-zhi-de-suan-fa/">
+        <id>https://wozaixuexi.github.io/post/yi-chong-li-yong-kai-ping-fang-suo-xiao-gui-mo-jin-xing-fen-zhi-de-suan-fa/</id>
+        <link href="https://wozaixuexi.github.io/post/yi-chong-li-yong-kai-ping-fang-suo-xiao-gui-mo-jin-xing-fen-zhi-de-suan-fa/">
         </link>
         <updated>2020-06-03T03:39:02.000Z</updated>
         <content type="html"><![CDATA[<p>123312</p>
@@ -48,8 +48,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[动态树的一种：Link-Cut Tree]]></title>
-        <id>http://localhost:4000/post/dong-tai-shu-de-yi-chong-link-cut-tree/</id>
-        <link href="http://localhost:4000/post/dong-tai-shu-de-yi-chong-link-cut-tree/">
+        <id>https://wozaixuexi.github.io/post/dong-tai-shu-de-yi-chong-link-cut-tree/</id>
+        <link href="https://wozaixuexi.github.io/post/dong-tai-shu-de-yi-chong-link-cut-tree/">
         </link>
         <updated>2020-06-03T03:38:21.000Z</updated>
         <content type="html"><![CDATA[<p>12333</p>
@@ -57,8 +57,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[莫比乌斯反演]]></title>
-        <id>http://localhost:4000/post/mo-bi-wu-si-fan-yan/</id>
-        <link href="http://localhost:4000/post/mo-bi-wu-si-fan-yan/">
+        <id>https://wozaixuexi.github.io/post/mo-bi-wu-si-fan-yan/</id>
+        <link href="https://wozaixuexi.github.io/post/mo-bi-wu-si-fan-yan/">
         </link>
         <updated>2020-06-03T03:38:03.000Z</updated>
         <content type="html"><![CDATA[<p>123</p>
@@ -66,22 +66,15 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[欧拉函数与欧拉定理]]></title>
-        <id>http://localhost:4000/post/ou-la-han-shu-yu-ou-la-ding-li/</id>
-        <link href="http://localhost:4000/post/ou-la-han-shu-yu-ou-la-ding-li/">
+        <id>https://wozaixuexi.github.io/post/ou-la-han-shu-yu-ou-la-ding-li/</id>
+        <link href="https://wozaixuexi.github.io/post/ou-la-han-shu-yu-ou-la-ding-li/">
         </link>
         <updated>2020-06-02T06:31:37.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>参考题单（别人的）</strong>：<a href="https://www.luogu.com.cn/training/7052#information">欧拉函数与欧拉定理</a></p>
-<h2 id="欧拉函数的定义">欧拉函数的定义</h2>
-<p>我们用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">\varphi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">φ</span></span></span></span>来表示欧拉函数。</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\varphi(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>表示在<code>[1,n]</code>中的正整数中，与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>互质的数的个数。</p>
-<p>用式子可以这样表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo>[</mo><mi>g</mi><mi>c</mi><mi>d</mi><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>n</mi><mo>)</mo><mo>=</mo><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">\varphi(n)=\sum\limits_{i=1}^n[gcd(i,n)=1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.329066em;vertical-align:-0.9776689999999999em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3513970000000004em;"><span style="top:-2.122331em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0000050000000003em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span><span style="top:-3.950005em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9776689999999999em;"><span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">c</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>。</p>
-]]></summary>
         <content type="html"><![CDATA[<p><strong>参考题单（别人的）</strong>：<a href="https://www.luogu.com.cn/training/7052#information">欧拉函数与欧拉定理</a></p>
 <h2 id="欧拉函数的定义">欧拉函数的定义</h2>
 <p>我们用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">\varphi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">φ</span></span></span></span>来表示欧拉函数。</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\varphi(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>表示在<code>[1,n]</code>中的正整数中，与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>互质的数的个数。</p>
 <p>用式子可以这样表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>φ</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo>[</mo><mi>g</mi><mi>c</mi><mi>d</mi><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>n</mi><mo>)</mo><mo>=</mo><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">\varphi(n)=\sum\limits_{i=1}^n[gcd(i,n)=1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">φ</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.329066em;vertical-align:-0.9776689999999999em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3513970000000004em;"><span style="top:-2.122331em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0000050000000003em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span><span style="top:-3.950005em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9776689999999999em;"><span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">c</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>。</p>
-<!--more-->
 <h2 id="欧拉函数的性质">欧拉函数的性质</h2>
 <h3 id="性质1">性质1</h3>
 <ul>
@@ -225,8 +218,8 @@ a^{m\bmod \varphi(n)+\varphi(n)}\pmod n&amp; m\geq \varphi(n)
     </entry>
     <entry>
         <title type="html"><![CDATA[扩展欧几里得算法]]></title>
-        <id>http://localhost:4000/post/kuo-zhan-ou-ji-li-de-suan-fa/</id>
-        <link href="http://localhost:4000/post/kuo-zhan-ou-ji-li-de-suan-fa/">
+        <id>https://wozaixuexi.github.io/post/kuo-zhan-ou-ji-li-de-suan-fa/</id>
+        <link href="https://wozaixuexi.github.io/post/kuo-zhan-ou-ji-li-de-suan-fa/">
         </link>
         <updated>2020-06-01T03:02:36.000Z</updated>
         <content type="html"><![CDATA[<p><strong>裴蜀定理</strong>(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mover accent="true"><mi>e</mi><mo>ˊ</mo></mover><mi>z</mi><mi>o</mi><mi>u</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Bézout</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">e</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˊ</span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span></span></span></span>定理)：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>y</mi><mo>=</mo><mi>g</mi><mi>c</mi><mi>d</mi><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">ax+by=gcd(a,b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">c</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span>有整数解。</p>
@@ -285,8 +278,8 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[LuoguP2261 [CQOI2007]余数求和 | 整除分块]]></title>
-        <id>http://localhost:4000/post/luogup2261-cqoi2007yu-shu-qiu-he-or-zheng-chu-fen-kuai/</id>
-        <link href="http://localhost:4000/post/luogup2261-cqoi2007yu-shu-qiu-he-or-zheng-chu-fen-kuai/">
+        <id>https://wozaixuexi.github.io/post/luogup2261-cqoi2007yu-shu-qiu-he-or-zheng-chu-fen-kuai/</id>
+        <link href="https://wozaixuexi.github.io/post/luogup2261-cqoi2007yu-shu-qiu-he-or-zheng-chu-fen-kuai/">
         </link>
         <updated>2020-06-01T02:20:48.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P2261">题目链接</a></p>
@@ -334,8 +327,8 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[LuoguP1463 [POI2002][HAOI2007]反素数 | 搜索 数论]]></title>
-        <id>http://localhost:4000/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/</id>
-        <link href="http://localhost:4000/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/">
+        <id>https://wozaixuexi.github.io/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/</id>
+        <link href="https://wozaixuexi.github.io/post/luogup1463-poi2002haoi2007fan-su-shu-or-sou-suo-shu-lun/">
         </link>
         <updated>2020-06-01T01:46:49.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P1463">题目链接</a></p>
